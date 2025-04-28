@@ -1,5 +1,5 @@
 import unittest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, modulus
 
 class TestCalculator(unittest.TestCase):
 
@@ -27,6 +27,15 @@ class TestCalculator(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             divide(10, 0)
+
+    def test_modulus(self):
+        self.assertEqual(modulus(10, 3), 1)
+        self.assertEqual(modulus(-1, 1), 0)
+        self.assertEqual(modulus(-1, -1), 0)
+        self.assertEqual(modulus(5, 2), 1)
+
+        with self.assertRaises(ValueError):
+            modulus(10, 0)
 
 if __name__ == '__main__':
     unittest.main()

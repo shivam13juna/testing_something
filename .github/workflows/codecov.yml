@@ -40,6 +40,6 @@ jobs:
       # 3. Upload to Codecov
       - uses: codecov/codecov-action@v5
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          #token: ${{ secrets.CODECOV_TOKEN }}
           files: coverage.xml     # now the file is exactly where we said
           fail_ci_if_error: true
