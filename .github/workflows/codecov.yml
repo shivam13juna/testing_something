@@ -42,7 +42,7 @@ jobs:
       with:
         name: coverage-report
     - name: Upload report to Codecov
-      uses: codecov/codecov-action@v4
+      uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }} # Store your Codecov token in GitHub secrets
         files: ./coverage.xml
