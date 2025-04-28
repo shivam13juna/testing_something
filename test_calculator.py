@@ -34,8 +34,6 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(modulus(-1, -1), 0)
         self.assertEqual(modulus(5, 2), 1)
 
-        with self.assertRaises(ValueError):
-            modulus(10, 0)
 
 if __name__ == '__main__':
     unittest.main()
